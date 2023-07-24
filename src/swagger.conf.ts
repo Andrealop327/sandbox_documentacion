@@ -2,7 +2,7 @@
 
 import swaggerJSDoc from "swagger-jsdoc";
 
- export const swaggerOptions={
+ export const swaggerOptions= {
 
   definition:{
 
@@ -10,16 +10,17 @@ import swaggerJSDoc from "swagger-jsdoc";
     info:{
         title:"Api de la ips AteneaIps",
         version:"1.0.0",
-        descripcion:"en esta Api tenemos las funcionalidades de la operacion de la Api AteneaIps"
+        description:"en esta Api tenemos las funcionalidades de la operacion de la Api AteneaIps"
     },
 
     servers:[{
-        url:"http//localhost:3000",
-        descripcion:"servidor local de documentación"
+        url:"http://localhost:3000/",
+        descripcion:"servidor local de documentación",
     }]
     },
 
-  apis:["src/index.ts", ".swagger/*.swagger-ts"]
-}
+    apis: ["./src/index.ts", "./swagger/*.swagger.ts"],
+};
 
-export const swaggerSpec=swaggerJSDoc(swaggerOptions)
+
+export const swaggerSpec = swaggerJSDoc(swaggerOptions);
